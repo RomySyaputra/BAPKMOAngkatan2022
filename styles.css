@@ -1,0 +1,46 @@
+body{
+	text-align: center;
+	background-color: rgb(30,31,36);
+	color: white;
+	justify-content: center;
+	align-items: center;
+}
+.mid{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.content {
+  display: flex;
+  justify-content: flex-start;
+}
+hr{
+	border: 1px solid white;
+}
+.cir{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20vh;
+}
+
+footer{
+	background-color: rgb(52,58,64);
+	color: white;
+	width: 100%;
+	padding: 20px;
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.circle:hover {
+    background-color: black;
+    color: white;
+}
