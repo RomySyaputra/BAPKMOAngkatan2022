@@ -5,6 +5,66 @@ body{
 	justify-content: center;
 	align-items: center;
 }
+.card-link.text-dark{
+	font-weight: bolder;
+}
+.page-item.active .page-link {
+  background-color: orange;
+  border-color: orange;
+  color: black;
+}
+.page-link{
+	color: black;
+}
+.page-item.active .page-link:hover {
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+.page-link:hover{
+	background-color: orange;
+  border-color: orange;
+	color: black;
+}
+.card-body, hr{
+	border: 1px solid orange;
+}
+.table-bordered-orange{
+  border: 1px solid orange;
+}
+.table-bordered-orange thead th{
+  border-top: 1px solid orange;
+  border-bottom: 1px solid orange;
+}
+.table-bordered-orange th{
+	border-top: 1px solid orange;
+}
+
+.table-bordered-orange td {
+  border-top: 1px solid orange;
+}
+.card-link{
+	display: inline-block;
+	background-color: orange;
+  border: none;
+  border-radius: 15px;
+  display: inline-block;
+  padding: 10px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 15px;
+	color: black;
+	font-weight: bolder;
+}
+.card-link:hover{
+	background-color: black;
+	color: white;
+	font-weight: bolder;
+}
+.card-text-sub{
+	color: orange;
+	font-weight: bolder;
+}
 .mid{
 	display: flex;
 	justify-content: center;
@@ -13,9 +73,6 @@ body{
 .content {
   display: flex;
   justify-content: flex-start;
-}
-hr{
-	border: 1px solid white;
 }
 .cir{
 	display: flex;
@@ -37,7 +94,8 @@ footer{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: white;
+  border: 1px solid black;
+  background-color: orange;
 }
 
 .circle:hover {
