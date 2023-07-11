@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/21d39d236c.js" crossorigin="anonymous"></script>
+    <title>BAPKMO Angkatan 2022</title>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">BAPKMO Angkatan 2022</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-flex">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Data Kelompok Angkatan 2022</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="informasi.html">Informasi</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1></h1>
+      <h1>Tanggal Pelaksanaan BAPKMO</h1>
+      <br> 
+      <div id="tgl" class="bg-dark text-white">
+        <span class="countdown-item">Sabtu <br><span class="countdown-label">22 Juli 2023</span></span>
+        <span><br><span>&<br><br><span>08:00 WIB - Selesai</span></span></span>
+        <span class="countdown-item">Minggu <br><span class="countdown-label">23 Juli 2023</span></span>
+      </div>
+      <br>
+      <h1>Hitung Mundur</h1>
+      <br>
+      <div id="countdown">
+        <span class="countdown-item"><span id="hari"></span><br><span class="countdown-label">Hari</span></span>
+        <span class="countdown-item"><span id="jam"></span><br><span class="countdown-label">Jam</span></span>
+        <span class="countdown-item"><span id="menit"></span><br><span class="countdown-label">Menit</span></span>
+        <span class="countdown-item"><span id="detik"></span><br><span class="countdown-label">Detik</span></span>
+      </div>
+      <br>      
+    </div>
+
+    
+    <div class="cir">
+        <button class="circle" onclick="window.scrollTo(0, 0);">
+          <i class="fa fa-2x fa-angle-up tm-up-arrow"></i>
+        </button>
+    </div>
+    <footer>Copyright &copy; 2023 BAPKMO</footer>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+    function hitungMundur(tanggalTujuan) {
+      const tanggalSekarang = new Date().getTime();
+      const selisih = tanggalTujuan - tanggalSekarang;
+
+      // Menghitung jumlah hari, jam, menit, dan detik
+      const satuHari = 1000 * 60 * 60 * 24;
+      const satuJam = 1000 * 60 * 60;
+      const satuMenit = 1000 * 60;
+      const satuDetik = 1000;
+
+      const hari = Math.floor(selisih / satuHari);
+      const jam = Math.floor((selisih % satuHari) / satuJam);
+      const menit = Math.floor((selisih % satuJam) / satuMenit);
+      const detik = Math.floor((selisih % satuMenit) / satuDetik);
+
+      // Mengembalikan hasil dalam format yang diinginkan
+      return {
+        hari: hari,
+        jam: jam,
+        menit: menit,
+        detik: detik
+      };
+    }
+
+    function updateCountdown() {
+      const tanggalTujuan = new Date('2023-07-22T08:00:00').getTime(); // Tanggal dan waktu tujuan dalam format ISO 8601
+      const hasil = hitungMundur(tanggalTujuan);
+
+      // Menampilkan hasil di elemen HTML
+      document.getElementById('hari').textContent = hasil.hari;
+      document.getElementById('jam').textContent = hasil.jam;
+      document.getElementById('menit').textContent = hasil.menit;
+      document.getElementById('detik').textContent = hasil.detik;
+
+      // Memperbarui setiap detik
+      setTimeout(updateCountdown, 1000);
+    }
+
+    // Memulai perhitungan mundur saat halaman dimuat
+    window.onload = function() {
+      updateCountdown();
+    };
+  </script>
+  </body>
+</html>

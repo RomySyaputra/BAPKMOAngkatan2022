@@ -102,3 +102,59 @@ footer{
     background-color: black;
     color: white;
 }
+
+#clockdiv p{
+    font-family: sans-serif;
+    color: black;
+    display: inline-block;
+    padding-top: 2px;
+    text-align: center;
+    font-size: 40px;
+    margin-right: 2px;
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+}
+#countdown, #tgl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+#countdown span{
+  font-family: sans-serif;
+  color: black;
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+  width: 200px;
+  background-color: orange;
+  border-radius: 5px;
+  height: 50px;
+}
+#tgl span{
+  font-family: sans-serif;
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 20px;
+  padding: 2px;
+}
+.countdown-item {
+  margin: 0 1px;
+}
+span#no{
+  background-color: transparent;
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+}
+.countdown-label {
+  font-weight: normal;
+  margin-right: 2px;
+}
